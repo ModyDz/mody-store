@@ -1,0 +1,41 @@
+.hero {
+  background-color: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images/hero__image.jpg) no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+.hero__container {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100%;
+  color: white;
+  padding: 2rem;
+}
+.hero__container h2 {
+  margin: 2rem 0;
+  font-size: 3rem;
+}
+
+.hero__container h2 span {
+  color: #ef6e47;
+}
+.hero__container p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.hero__container.flex {
+  flex-direction: column;
+  align-items: start;
+}
+.hero__container .btns {
+  margin-top: 1.5rem;
+  display: block;
+  position: static;
+}
+
+.prod {
+  border-bottom: 1px solid white;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
