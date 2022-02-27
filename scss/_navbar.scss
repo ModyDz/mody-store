@@ -1,6 +1,6 @@
 nav {
   background-color: black;
-  padding: 0.35rem 0.5rem;
+  padding: 0.75rem;
 }
 .nav__container {
   color: white;
@@ -8,9 +8,10 @@ nav {
   margin: 0 auto;
   padding: 0 1rem;
   position: relative;
+  overflow: hidden;
 }
 .logo span {
-  color: #ef6e47;
+  color: var(--color-primary);
 }
 .searchInp {
   flex-grow: 1;
@@ -22,19 +23,19 @@ nav {
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding: 0.85rem 1.6rem;
-  font-size: 0.8rem;
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  font-size: 0.75rem;
   letter-spacing: 0.3px;
 }
 .searchInp input:focus {
   outline: none;
 }
 .searchInp .img {
-  padding: 0 1rem;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ef6e47;
+  background-color: var(--color-primary);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -53,16 +54,15 @@ nav {
 .log {
   border: none;
   background-color: transparent;
-  border: 1px solid #cc7b31;
-  padding: 1rem;
+  border: 1px solid var(--color-secondary);
+  padding: 0.75rem;
   margin-right: 1rem;
   font-weight: 700;
 }
 .cta {
   border: none;
-  background-color: #cc7b31;
-  padding: 1rem;
-  margin-right: 1rem;
+  background-color: var(--color-secondary);
+  padding: 0.75rem;
   font-weight: 700;
 }
 .nav__menu {
@@ -71,7 +71,7 @@ nav {
 }
 .nav__menu span {
   display: block;
-  background-color: #cc7b31;
+  background-color: var(--color-secondary);
   width: 24px;
   height: 4px;
   border-radius: 10px;
@@ -80,10 +80,44 @@ nav {
   margin-top: 4px;
 }
 @media (max-width: 768px) {
+  .nav__container.flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .nav__menu {
     display: block;
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+  .nav__container a {
+    align-self: center;
+  }
+  .searchInp {
+    max-width: 100vw;
+    margin: 1rem;
+    width: 100%;
+    align-self: center;
   }
   .btns {
-    display: none;
+    flex-direction: column;
+    align-self: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s all linear;
+  }
+  .btns button {
+    width: 100%;
+  }
+
+  .log {
+    order: 2;
+    margin-top: 1rem;
+  }
+  .cta {
+    order: 1;
+  }
+  .show {
+    max-height: 200px;
   }
 }

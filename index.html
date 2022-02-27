@@ -43,7 +43,7 @@
       <div class="hero__container flex jc-c">
         <h2>Welcome to Mody<span>Store</span>!</h2>
         <p>Online shopping has never been this easy.</p>
-        <div class="btns">
+        <div class="hero__btns">
           <button class="log">Log In</button>
           <button class="cta">Sign Up</button>
         </div>
@@ -51,5 +51,12 @@
       </div>
     </main>
     <!-- End -->
+    <script>
+      const btns = document.querySelector(".btns");
+      const toggler = document.querySelector(".nav__menu");
+      toggler.addEventListener("click", () => {
+        btns.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
