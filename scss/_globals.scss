@@ -6,6 +6,7 @@
   padding: 0;
 }
 :root {
+  font-size: calc(0.658vmin + 0.75rem);
   --color-primary: #ef6e47;
   --color-secondary: #cc7b31;
 }
@@ -16,6 +17,13 @@ a {
 html,
 button {
   font-family: "Monsterrat", sans-serif;
+  font-size: 1rem;
+}
+ul {
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
 }
 img {
   width: 100%;

@@ -15,28 +15,28 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav>
-      <div class="nav__container flex ai-c jc-sb">
-        <a href="/"
-          ><h1 class="logo">Mody<span>Store</span></h1></a
-        >
-        <div class="searchInp flex">
+    <header>
+      <nav class="flex jc-sb ai-c">
+        <h1 class="logo">
+          <a href="#">Mody<span>Store</span></a>
+        </h1>
+        <div class="searchBar flex">
           <input type="search" placeholder="What are you looking for?" />
-          <div class="img">
-            <img src="./images/searchIcon.svg" alt="Search Icon" />
+          <div class="img flex ai-c jc-c">
+            <img src="./images/searchIcon.svg" alt="" />
           </div>
         </div>
-        <div class="btns">
-          <button class="log">Log In</button>
-          <button class="cta">Sign Up</button>
+        <div class="nav__btns flex btns__hide initial">
+          <button><a href="#">Log In</a></button>
+          <button class="cta"><a href="#">Sign Up</a></button>
         </div>
         <div class="nav__menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <!-- End -->
     <!-- Hero section -->
     <main class="hero">
@@ -51,11 +51,17 @@
       </div>
     </main>
     <!-- End -->
+
     <script>
-      const btns = document.querySelector(".btns");
+      const btns = document.querySelector(".nav__btns");
       const toggler = document.querySelector(".nav__menu");
       toggler.addEventListener("click", () => {
-        btns.classList.toggle("show");
+        btns.classList.toggle("btns__show");
+        btns.classList.remove("initial");
+        btns.classList.toggle("btns__hide");
+      });
+      window.addEventListener("resize", () => {
+        btns.classList.add("initial");
       });
     </script>
   </body>
